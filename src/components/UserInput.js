@@ -15,8 +15,9 @@ class UserInput extends Component {
   }
 
   handleOnSubmit = (event) => {
-    event.preventDefault();
-    this.props.dispatch({type: 'ADD_USER', user: this.state})
+    event.preventDefault(); //is called to stop the page from refreshing
+    this.props.dispatch({type: 'ADD_USER', user: this.state}) 
+    //is called with a custom action
   }
 
   render() {
